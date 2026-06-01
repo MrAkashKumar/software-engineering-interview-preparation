@@ -1,4 +1,3 @@
-# software-engineering-notes
 # Software Engineering Interview Preparation 🚀
 
 Welcome to the ultimate repository for software engineering interview preparation. This repository centralizes comprehensive notes, code snippets, architectural designs, and behavioral frameworks needed to crack technical interviews at top-tier tech companies.

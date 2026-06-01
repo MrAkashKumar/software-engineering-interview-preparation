@@ -86,7 +86,7 @@ Cracking the interview beyond the raw technical code syntax:
 
 1. **Clone the Repository**
    ```bash
-   git clone https://github.com
+   git clone https://github.com/MrAkashKumar/software-engineering-interview-preparation.git
    cd software-engineering-interview-preparation
    ```
 

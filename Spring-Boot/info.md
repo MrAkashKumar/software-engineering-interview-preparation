@@ -104,4 +104,26 @@
     15. A critical production issue occurs due to database failure. What is your recovery strategy?
 
 
+      1. How does Spring Boot decide which **auto-configuration** to apply?
+      2. What happens internally when you add 'spring-boot-starter-web'?
+      3. Why does Spring Boot prefer **convention over configuration**?
+      4. How does Spring Boot load 'application[dot]properties' internally?
+      5. Exact **startup flow** of a Spring Boot application.
+      6. Difference between '@ComponentScan' and @SpringBootApplication'
+      7. How does Spring Boot detect **embedded Tomcat** and configure it?
+      8. What happens if two beans of the same type exist without '@Qualifier'?
+      9. How does Spring Boot handle **profile-specific configuration**?
+      10. What is the role of 'SpringFactoriesLoader' under the hood?
+      11. Difference between '@RestController' and '@Controller' internally.
+      12. How does Spring Boot manage **dependency versions automatically**?
+      13. Lifecycle of a Spring Bean in Spring Boot.
+      14. How does Spring Boot handle **externalized configuration**?
+      15. Fat jar vs normal jar — internal difference.
+      16. How Spring Boot decides **server port priority**
+      17. What happens internally when you hit a **REST endpoint**
+      18. How Spring Boot integrates with **Actuator** internally.
+      19. How exception translation works in Spring Boot.
+      20. Common performance mistakes in Spring Boot applications.
+
+
     

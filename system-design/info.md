@@ -106,3 +106,11 @@
       3. Design Whatsapp
       4. Design Insta/Twitter News Feed
       5. Design Search Autocomplete
+
+      Question- 1 -> How can we create 100% unhackable application where must configured mechanishm - RASP -> Runtime Application Self-Protection 
+      Question - 2 -> Design a RAG Pipeline for 10 million docs with zero hallucination.
+      Question - 3 -> Ralph Wiggum loop pattern 
+      Question - 4 -> Design an AI agent where answer user queries, Decide when to use external tools and remember past conversations
+      Question - 5 -> Suppose you have to train a tiny language model with a mixture of K datasets but you do not know the optimal weight each 
+                        dataset. your goal is to find these optimal weights to minimize the cross entropy on a validation set. how do you do this?
+      Question - 6 -> 

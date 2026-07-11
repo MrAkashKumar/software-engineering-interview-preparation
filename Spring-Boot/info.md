@@ -124,6 +124,137 @@
       18. How Spring Boot integrates with **Actuator** internally.
       19. How exception translation works in Spring Boot.
       20. Common performance mistakes in Spring Boot applications.
+      21) @Transactional present but rollback doesn't happen. Why?
+      22) DB connection pool exhausts under load. Why?
+      23) Scheduled jobs affect API latency. How to isolate?
+      24) App behaves differently in Docker vs local. Why?
+      25) New deployment but users see old behavior. What went wrong?
+      26) Logs missing in production but present locally.
+      Where to check?
+      27) Async processing made performance worse. How?
+      28) Circuit breaker stays open even when service is healthy. Why?
+      29) Adding more resources didn't improve performance.
+      Why?
+      30) What Spring Boot decision you made could cause production issues?
 
 
-    
+      1. Why is String immutable in Java?
+      2. What's the difference between HashMap and ConcurrentHashMap?
+      3. How does HashMap handle collisions internally?
+      4. When would you use volatile instead of synchronized?
+      5. What causes a ConcurrentModificationException?
+      6. How do you detect and resolve a deadlock?
+      7. What's the difference between == and equals()?
+      8. How does the JVM decide when to perform Garbage Collection?
+      9. What causes an OutOfMemoryError, and how would you investigate it?
+      10. What's the difference between ArrayList and LinkedList, and when would you choose each?
+      11. How does the Executor Framework improve thread management?
+      12. What happens internally when you call hashCode() and equals() in a HashMap?
+      13. What's the difference between Callable and Runnable?
+      14. How does CompletableFuture improve asynchronous programming?
+      15. Why can a thread pool become exhausted even when CPU usage is low?
+      16. What are the different types of JVM memory, and what is stored in each?
+      17. What's the difference between fail-fast and fail-safe iterators?
+      18. When would you use AtomicInteger instead of synchronized?
+      19. How would you investigate a Java application that's becoming slower over time?
+      20. If your Java application works perfectly in testing but randomly fails in production, what's your debugging approach?
+
+
+      1. Why might @Transactional not roll back a transaction?
+      2. How does Spring Boot auto-configuration work internally?
+      3. What's the difference between @Component, @Service, and @Repository?
+      4. How would you handle duplicate API requests in a payment service?
+      5. What happens if two users update the same record simultaneously?
+      6. How does Spring Boot manage database connections using HikariCP?
+      7. What are the most common causes of connection pool exhaustion?
+      8. How would you secure REST APIs using Spring Security and JWT?
+      9. What's the difference between @PathVariable and @RequestParam?
+      10. How would you improve a slow Spring Data JPA query?
+      11. What is the N+1 query problem, and how do you fix it?
+      12. How would you debug a Spring Boot application that's slow only in production?
+      13. What's the difference between synchronous and asynchronous processing in Spring Boot?
+      14. How would you prevent duplicate Kafka message processing?
+      15. What's the purpose of Spring Boot Actuator, and which endpoints do you use most?
+      16. How would you upload large files without causing memory issues?
+      17. What's the difference between BeanFactory and ApplicationContext?
+      18. How would you trace a request across multiple Spring Boot microservices?
+      19. What steps would you take before scaling a Spring Boot application?
+      20. If a production issue is reported but there are no exceptions in the logs, what's your debugging approach?
+
+      A Senior Spring Boot interviewer asked only 3 questions.
+      1. No coding.
+      2. No theory.
+      Just these:
+      Scenario 1
+            Your Spring Boot application works perfectly.
+            After a deployment, only 5% of requests start failing randomly.
+            Question: How would you identify the root cause without rolling back the deployment?
+      --
+      Scenario 2
+            Customers report duplicate payments, but your logs show only one successful API request.
+            Question: What could be happening behind the scenes?
+      ---
+      Scenario 3
+            CPU is 18%, Memory is 45%, Database is healthy.
+            Yet API latency suddenly jumps from 120ms to 9 seconds.
+            Question: What's your debugging approach?
+
+
+      -------------------------------------------
+        Your API suddenly starts returning 503. What's your first check?
+      • "@Transactional" isn't rolling back. Why?
+      • HikariCP reports "Connection is not available." What's your debugging approach?
+      • API latency jumps from 150ms to 5s after deployment. What could have changed?
+      • Kafka consumer is alive, but lag keeps increasing. Why?
+      • Duplicate orders are being created. How would you fix them?
+      • Redis is serving stale data. What's your approach?
+      • One microservice slows down the entire request chain. What would you investigate?
+      • CPU is low, but response time is high. Why?
+      • Your application works locally but fails only in production. Where do you start?
+      • Memory usage keeps increasing every day. What's your first step?
+      • Scheduled jobs start running twice after scaling. Why?
+      • Health endpoint is UP, but users can't access the API. How is that possible?
+      • Autoscaling creates more pods, but throughput doesn't improve. Why?
+      • You have 20 minutes to identify the root cause of a production issue. What's your plan?
+
+
+      1. Why can @Transactional fail even when no exception is thrown?
+      2. Your Spring Boot API becomes slow only during peak hours. Where would you investigate first?
+      3. How would you prevent duplicate order creation in a distributed system?
+      4. Why can HikariCP run out of connections while the database is still healthy?
+      5. A Kafka consumer is running, but lag keeps increasing. How would you debug it?
+      6. Your application works locally but fails only in production. What's your first step?
+      7. Why can a cache return stale data even after a successful database update?
+      8. How would you investigate random 503 errors when all services appear healthy?
+      9. Your scheduled job starts running twice after scaling. Why?
+      10. How would you debug a memory leak in a Spring Boot application?
+      11. One microservice is slowing down the entire system. How would you isolate it?
+      12. Why does API latency increase while CPU and memory remain normal?
+      13. What would you check before increasing the HikariCP pool size?
+      14. How would you trace a request across multiple Spring Boot microservices?
+      15. What's your first action when a production issue is reported but there are no exceptions in the logs?
+
+      =========================================================================================================
+      Your application is deployed on Kubernetes.
+            Everything looks normal.
+            - ✅ Pods are Running
+            - ✅ Health checks are passing
+            - ✅ Database is healthy
+            - ✅ CPU usage is under 25%
+            - ✅ Memory usage is normal
+            
+            But users suddenly start receiving 504 Gateway Timeout errors.
+            
+            The interviewer asked:
+            1. What would you investigate first?
+            2. Would you suspect Spring Boot or the infrastructure?
+            3. Which logs would you check first?
+            4. How would you determine whether the problem is in your application or a downstream service?
+            5. What metrics would help you identify the root cause?
+            6. Would you restart the pods immediately? Why or why not?
+            7. How would you reproduce this issue without affecting production?
+            8. Which Spring Boot Actuator endpoints would you use?
+            9. If this happened every evening at 7 PM, what would you suspect?
+            10. What's your step-by-step debugging approach?
+
+

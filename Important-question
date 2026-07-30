@@ -1,2 +1,11 @@
-                1. your application become slow in production. how will you debug it? 
-                2. 
+                0. your application become slow in production. how will you debug it? 
+                1. How does a HashMap work internally — and what changed in Java 8?
+                2. How does ConcurrentHashMap stay thread-safe without locking the whole map?
+                3. When would you NOT use a Stream, even if you can?
+                4. thenApply vs thenCompose vs thenCombine in CompletableFuture — when do you use which?
+                5. What problem do Java 21 virtual threads solve, and what is "thread pinning"?
+                6. G1 vs ZGC vs Parallel GC — which would you choose, and why?
+                7. Why can @Transactional silently do nothing when you call it from the same class?
+                8. Two microservices must update together and one call fails — what do you do?
+                9. How do you build a truly immutable class, and why does equals() need hashCode()?
+                10. How would you implement a thread-safe LRU cache

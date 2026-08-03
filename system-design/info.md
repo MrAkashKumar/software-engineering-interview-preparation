@@ -114,3 +114,71 @@
       Question - 5 -> Suppose you have to train a tiny language model with a mixture of K datasets but you do not know the optimal weight each 
                         dataset. your goal is to find these optimal weights to minimize the cross entropy on a validation set. how do you do this?
       Question - 6 -> 
+
+
+
+🚦 Design a Distributed Rate Limiter | Senior+ System Design Walkthrough
+
+One of the most common Senior Software Engineer (L5/L6) system design questions is:
+"Design a Distributed Rate Limiter."
+It sounds simple, but interviewers are actually evaluating your understanding of:
+
+✅ Distributed Systems
+✅ Scalability
+✅ Atomic Operations
+✅ Distributed Coordination
+✅ Consistency vs Availability
+✅ Performance Trade-offs
+
+📝 Step 1: Clarify Requirements
+Before designing, ask:
+• Are we limiting per IP, User, API Key, or Endpoint?
+• Is the limit per second, minute, or hour?
+• Should it be a Hard Limit or Soft Limit (bursts allowed)?
+• Does it run inside every service or as a central API Gateway/Middleware? (Preferred)
+• Target latency? Ideally <1 ms p99, since it's in the hot path.
+
+📊 Step 2: Capacity Planning
+Imagine:
+• 50,000 API servers
+• 10K requests/sec each
+➡️ 500 Million Requests/sec
+A single Redis instance cannot handle this. The solution is to shard counters by API Key across a Redis cluster.
+
+⚙️ Core Algorithms
+1️⃣ Fixed Window Counter
+✔ O(1) memory & computation
+❌ Suffers from the boundary burst problem (users can exceed limits around window resets).
+
+2️⃣ Sliding Window Log
+✔ Perfect accuracy
+❌ Stores every request timestamp, making memory usage expensive at scale.
+
+3️⃣ Sliding Window Counter ⭐ (Recommended)
+Maintains only:
+• Current Window Counter
+• Previous Window Counter
+Estimated Count = Previous × Remaining Weight + Current
+✅ O(1) memory
+✅ Near-perfect accuracy
+✅ Eliminates boundary burst
+✅ Excellent for strict API rate limiting
+This approach is widely associated with Cloudflare's production discussions.
+
+4️⃣ Token Bucket
+Each client owns a bucket of tokens.
+• Every request consumes one token.
+• Tokens refill continuously.
+✅ Supports controlled bursts
+✅ Great user experience
+Ideal when short bursts are allowed while maintaining a long-term average.
+
+5)🏗️ Distributed Challenges
+The real challenge isn't counting requests—it's maintaining a global limit across thousands of servers.
+Key considerations:
+• Atomic Redis operations (INCR/Lua Scripts)
+• Consistent Hashing
+• Redis Sharding
+• Replication & High Availability
+• Multi-region synchronization
+• Avoiding Single Points of Failure

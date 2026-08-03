@@ -146,6 +146,7 @@ Imagine:
 A single Redis instance cannot handle this. The solution is to shard counters by API Key across a Redis cluster.
 
 ⚙️ Core Algorithms
+
 1️⃣ Fixed Window Counter
 ✔ O(1) memory & computation
 ❌ Suffers from the boundary burst problem (users can exceed limits around window resets).

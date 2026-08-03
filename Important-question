@@ -9,3 +9,56 @@
                 8. Two microservices must update together and one call fails — what do you do?
                 9. How do you build a truly immutable class, and why does equals() need hashCode()?
                 10. How would you implement a thread-safe LRU cache
+
+
+
+𝗖𝗼𝗿𝗲 𝗝𝗮𝘃𝗮 & 𝗟𝗮𝗻𝗴𝘂𝗮𝗴𝗲 𝗙𝗲𝗮𝘁𝘂𝗿𝗲𝘀:
+
+1. What are the new features in Java 17?
+2. What is the `var` keyword? Can we use it as a generic type?
+3. What is an effective final variable in Java?
+4. What is the Record class, and how do we store data in the Record class if a list of data is coming through a query? How to fetch the first record?
+5. What is an Optional class?
+6. What is a checked Exception? Adv & disadv.
+7. What is exception handling, What is a Controller Advisor?
+8. Reverse a string without using predefined methods.
+9. Can we keep HashMap keys mutable? Why and why not?
+
+𝗜𝗻𝘁𝗲𝗿𝗳𝗮𝗰𝗲𝘀 & 𝗢𝗢𝗣:
+10. Is it possible to write private methods in an interface?
+11. How many types of methods can we write in an interface?
+12. What happens if we write two identical default methods in two diff interfaces and try to implement them in a class? How to fix the issue?
+13. Explain the SOLID design principles.
+14. What are Liskov's substitutional principles? If we can replace the parent class object with a subclass, then why do we need inheritance?
+15. Explain and implement the Factory design pattern (with some modification).
+
+𝗖𝗼𝗻𝗰𝘂𝗿𝗿𝗲𝗻𝗰𝘆 & 𝗠𝘂𝗹𝘁𝗶𝘁𝗵𝗿𝗲𝗮𝗱𝗶𝗻𝗴:
+16. Diff b/w synchronized keyword and ReentrantLock. What is the trade-off?
+17. What is a volatile keyword?
+18. What is the diff b/w the volatile keyword and the Atomic class (AtomicInteger & AtomicFloat)?
+19. Explain CompletableFuture methods.
+
+𝗦𝘁𝗿𝗲𝗮𝗺𝘀 & 𝗙𝘂𝗻𝗰𝘁𝗶𝗼𝗻𝗮𝗹 𝗣𝗿𝗼𝗴𝗿𝗮𝗺𝗺𝗶𝗻𝗴:
+20. What is the difference between a stream and a parallel stream? Have you used a parallel stream in a real project?
+21. Stream vs flatMap.
+
+𝗦𝗽𝗿𝗶𝗻𝗴 𝗙𝗿𝗮𝗺𝗲𝘄𝗼𝗿𝗸 & 𝗦𝗽𝗿𝗶𝗻𝗴 𝗕𝗼𝗼𝘁:
+22. Spring Container internal working.
+23. Explain Bean Lifecycle.
+24. What is @EnableAutoConfiguration?
+25. What is @Qualifier and difference b/w @Primary and @Qualifier?
+26. Diff b/w IOC and Dependency Injection.
+27. What is Dependency Injection and its types?
+28. What is a spring profile, and how did you use it?
+29. What is the difference between Path Variable and Request Params?
+30. How does the @Transactional annotation work?
+31. What is fetch type (Lazy and Eager Loading)?
+
+𝗦𝗽𝗿𝗶𝗻𝗴 𝗦𝗲𝗰𝘂𝗿𝗶𝘁𝘆 & 𝗝𝗪𝗧:
+32. Explain basic Spring Security.
+33. How have you used Spring Security in your project?
+34. How did you implement Spring Security in distributed microservices?
+35. What is JWT security, and how have you used it in your project?
+
+
+

@@ -114,7 +114,47 @@
       Question - 5 -> Suppose you have to train a tiny language model with a mixture of K datasets but you do not know the optimal weight each 
                         dataset. your goal is to find these optimal weights to minimize the cross entropy on a validation set. how do you do this?
       Question - 6 -> 
+      Here are some important questions worth preparing for 👇
 
+      🔹 Low-Level Design (LLD / OOD)
+      
+      • Design a Parking Lot System.
+      • Design an ATM / Banking System with accounts, transactions, and fund transfers.
+      • Design a Stock Trading Order Book with buy/sell order matching.
+      • Design a Rate Limiter from scratch.
+      • Which Design Pattern would you use here, and why?
+      • When would you choose Strategy Pattern over Factory or Observer?
+      • How would you apply SOLID Principles to your design?
+      • How would you make your design extensible for future requirements?
+      • How would you handle concurrent operations in your design?
+      
+      🔹 High-Level Design (HLD)
+      
+      • Design a Payment Processing System that prevents duplicate charges.
+      • Design a Ledger / Double-Entry Bookkeeping System.
+      • Design a Real-Time Fraud Detection Pipeline.
+      • Design a Notification Service supporting Email, SMS, and Push Notifications.
+      • How would your system handle a downstream service failure?
+      • SQL vs NoSQL — which would you choose for a transactional banking system, and why?
+      • How would you design reliable message processing with Kafka?
+      • How would you handle retries and duplicate events?
+      • How would you maintain data consistency across distributed services?
+      • How would you design the system for high availability and fault tolerance?
+      
+      🔥 Key Areas You Should Prepare
+      
+      Don't focus only on drawing architecture diagrams or naming technologies.
+      
+      Be prepared for follow-up questions such as:
+      
+      ➡️ What happens if a service goes down?
+      ➡️ What happens if the same request is retried?
+      ➡️ What if two transactions happen simultaneously?
+      ➡️ How do you prevent duplicate processing?
+      ➡️ How do you handle partial failures?
+      ➡️ How do you maintain consistency during failures?
+      ➡️ How do you scale the system when traffic increases 10x?
+      ➡️ How do you recover from a failed transaction?
 
 
 🚦 Design a Distributed Rate Limiter | Senior+ System Design Walkthrough
